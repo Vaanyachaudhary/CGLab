@@ -1,0 +1,23 @@
+#include<graphics.h>
+#include<stdlib.h>
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+int graphdriver=DETECT,graphmode,errorcode;
+int x1,y1,x,y;
+clrscr();
+printf("Enter the points to draw a point:\n");
+scanf("%d%d",&x1,&y1);
+initgraph(&graphdriver,&graphmode,"c:\\turboc3\\bgi");
+printf("Point before translation\n\n\n\n\n\n\n\n\n");
+putpixel(x1,y1,RED);
+printf("Enter translation co-ordinates\n");
+scanf("%d%d",&x,&y);
+x1=x1+x;
+y1=y1+y;
+printf("Point after translation");
+putpixel(x,y,RED);
+getch();
+closegraph();
+}
